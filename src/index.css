@@ -59,11 +59,13 @@ main {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: -300;
 }
 
 .yellow-blob {
   position: absolute;
   top: 0;
+  z-index: -300;
   right: 0;
 }
 
@@ -81,7 +83,7 @@ main {
   background-color: inherit;
   width: 140px;
   min-height: 30px;
-  margin-right: 20px;
+  margin: 0px 15px;
   cursor: pointer;
   word-wrap: break-word;
 }
@@ -106,7 +108,7 @@ hr {
 }
 
 .container {
-  width: 50%;
+  width: 70%;
   /* border: 1px solid black; */
   margin: auto;
   overflow-y: scroll;
@@ -169,5 +171,14 @@ hr {
 
   .question {
     margin-bottom: 30px;
+  }
+
+  .answer {
+    margin: 0px 5px !important;
+    width: 120px;
+  }
+
+  .check-answer {
+    width: 150px;
   }
 }
