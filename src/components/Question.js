@@ -1,37 +1,41 @@
-import React, { useEffect } from "react";
-import { nanoid } from "nanoid";
+import React from "react";
+import Answer from "./Answer";
 
 
 function Question(props) {
 
     function cleanText(text) {
         return text
-        .replace('#039;/g', "'")
-        .replace('&#039;/g', "'")
-        .replace("&quot;", '"')
-        .replace("quot;", '"')
-        .replace('&"', '"')
-        .replace("&'", "'")
-      }
+            .replace('#039;/g', "'")
+            .replace('&#039;/g', "'")
+            .replace("&quot;", '"')
+            .replace("quot;", '"')
+            .replace('&"', '"')
+            .replace("&'", "'")
+    }
 
-    var allAnswers = props.allAnswers
 
-    useEffect(() => {
-        console.log(props.title)
-    })
-
-    const answerButtons = allAnswers.map(answer =>
-        <button key={nanoid()} className="answer">{cleanText(answer)}</button>
+    const answerButtons = props.choices.map((choice) =>
+        <Answer
+            key={choice.id}
+            id={choice.id}
+            isSelected={choice.isSelected}
+            isCorrect={choice.isCorrect}
+            title={cleanText(choice.title)} 
+            selectAnswer={() => props.selectAnswer(choice.parent, choice.id)}
+            parent={choice.parent}
+            quiz={props.quiz}
+        />
     )
 
     return (
-        
+
         <div className="question">
             <h1 className="question-title">{props.title}</h1>
             <div className="answer-group">
                 {answerButtons}
             </div>
-            <hr/>
+            <hr />
         </div>
     )
 }

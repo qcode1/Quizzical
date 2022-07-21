@@ -40,7 +40,7 @@ main {
 .title {
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .start-button {
@@ -68,21 +68,37 @@ main {
 }
 
 .question-title {
-
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .answer {
   color: #293264;
   border: 2px solid #4D5B9E;
   text-align: center;
-  font-size: 15px;
+  font-size: 12px;
   border-radius: 10px;
   background-color: inherit;
-  width: 160px;
-  min-height: 45px;
+  width: 140px;
+  min-height: 30px;
   margin-right: 20px;
   cursor: pointer;
-  word-wrap:break-word;
+  word-wrap: break-word;
+}
+
+.answer.selected {
+  background-color: #D6DBF5;
+  font-weight: 700;
+}
+
+.answer.correct {
+  background-color: #67dc80;
+  font-weight: 700;
+}
+
+.answer.wrong {
+  background-color: #fa9999;
+  font-weight: 700;
 }
 
 hr {
@@ -101,7 +117,7 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .check-answer {
@@ -115,8 +131,20 @@ hr {
   text-align: center;
   font-size: 15px;
   font-weight: 600;
+  cursor: pointer;
 }
 
-.check-ans-group {
+.ans-btn-group {
   text-align: center;
+}
+
+.completed-btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.question {
+  margin-bottom: 50px;
 }
