@@ -148,3 +148,26 @@ hr {
 .question {
   margin-bottom: 50px;
 }
+
+
+@media (max-width: 768px) {
+  .blue-blob {
+    max-width: 8%;
+  }
+
+  .yellow-blob {
+    max-width: 8%;
+  }
+
+  .container {
+    width: 85%;
+  }
+
+  .question-title {
+    font-size: 15px;
+  }
+
+  .question {
+    margin-bottom: 30px;
+  }
+}
