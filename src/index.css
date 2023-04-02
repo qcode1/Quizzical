@@ -23,7 +23,7 @@ main {
 
 .welcome {
   background-color: #F5F7FB;
-  height: calc(73vh);
+  height: calc(87vh);
   width: 100%;
   text-align: center;
   display: flex;
@@ -56,17 +56,18 @@ main {
 }
 
 .blue-blob {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   left: 0;
   z-index: -300;
+  /* margin: 0; */
 }
 
 .yellow-blob {
   position: absolute;
   top: 0;
-  z-index: -300;
   right: 0;
+  z-index: -300;
 }
 
 .question-title {
@@ -111,8 +112,8 @@ hr {
   width: 70%;
   /* border: 1px solid black; */
   margin: auto;
-  overflow-y: scroll;
-  height: 96vh;
+  /* overflow-y: scroll; */
+  /* height: 96vh; */
 }
 
 .answer-group {
